@@ -1,0 +1,5 @@
+# Machine-generated file - use setup menu in minicom to change parameters.
+pu baudrate         115200
+pu port             /dev/tty.usbmodem101
+pu escape-key       Escape (Meta)
+pu addcarreturn     Yes
