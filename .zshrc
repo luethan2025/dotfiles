@@ -1,3 +1,30 @@
+export ZSH="$HOME/.oh-my-zsh"
+zstyle ':omz:update' mode auto
+ZSH_THEME="af-magic"
+
+# ----------------------------------
+# OHMYZSH SETTINGS
+# ----------------------------------
+DISABLE_MAGIC_FUNCTIONS=true
+DISABLE_LS_COLORS=true
+ENABLE_CORRECTION=true
+COMPLETION_WAITING_DOTS=true
+
+# ----------------------------------
+# OHMYZSH PLUGINS
+# ----------------------------------
+plugins=(
+  copyfile
+  dirhistory
+  encode64
+  git
+  git-lfs
+  jsontools
+  sudo
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
 # ----------------------------------
 # COMMAND ALIASES
 # ----------------------------------
@@ -23,6 +50,10 @@ alias movies="cd ~/Movies"
 alias music="cd ~/Music"
 alias pictures="cd ~/Pictures"
 alias public="cd ~/Public"
+alias mkdir="mkdir -p"
+alias encode="encode64"
+alias encodefile="encodefile64"
+alias decode="decode64"
 
 # ----------------------------------
 # FUNCTIONS
@@ -31,10 +62,4 @@ function b {
   cd - > /dev/null;
 }
 
-function mk {
-  mkdir -p $1
-}
-
-function rmrf {
-  rm -rf $1
-}
+source $ZSH/oh-my-zsh.sh
