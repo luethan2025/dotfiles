@@ -63,4 +63,12 @@ function b {
   cd - > /dev/null;
 }
 
+function docker {
+  if [[ $1 == "clean" ]]; then
+    docker system prune -a --volumes
+  else
+    command docker "$@"
+  fi
+}
+
 source $ZSH/oh-my-zsh.sh
