@@ -64,7 +64,7 @@ function b {
 }
 
 function docker {
-  if [[ $1 == "clean" ]]; then
+  if [[ $1 == "compose" && $2 == "clean" ]]; then
     docker system prune -a --volumes
   else
     command docker "$@"
