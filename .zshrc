@@ -92,7 +92,7 @@ export PSC_USERNAME="lue"
 # COMMAND ALIASES
 # ----------------------------------
 alias p="projects"
-alias groups="change_primary_group -l"
+alias group="change_primary_group -l"
 alias jobs="squeue -u $PSC_USERNAME"
 
 # ----------------------------------
