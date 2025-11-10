@@ -9,3 +9,5 @@
 	ff = true
 [http]
 	postBuffer = 5368709120
+[core]
+  editor = vim
